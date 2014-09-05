@@ -1,0 +1,7 @@
+package com.bignerdranch.android.hellomoon;
+
+import android.support.v4.app.Fragment;
+
+public class HelloMoonFragment extends Fragment {
+
+}
