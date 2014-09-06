@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;ImageFragment.java&apos; to &apos;CriminalIntent/src/com.bignerdranch.android.criminalintent&apos;&#x0D;&#x0A;- Original project: &apos;20_CameraImage_CriminalIntent&apos;&#x0D;&#x0A;- Destination element: &apos;CriminalIntent/src/com.bignerdranch.android.criminalintent&apos;&#x0D;&#x0A;- Original element: &apos;com.bignerdranch.android.criminalintent.ImageFragment.java&apos;" description="Copy compilation unit" destination="=CriminalIntent/src&lt;com.bignerdranch.android.criminalintent" element1="/src&lt;com.bignerdranch.android.criminalintent{ImageFragment.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1410039321611" units="1" version="1.0"/>
+</session>

@@ -31,9 +31,7 @@ public class Crime {
 		mId = UUID.fromString(jo.getString(JSON_ID));
 		mDate = new Date(jo.getLong(JSON_DATE));
 		mSolved = jo.getBoolean(JSON_SOLVED);
-		if (jo.has(JSON_TITLE)) {
-			mTitle = jo.getString(JSON_TITLE);
-		}
+		mTitle = jo.getString(JSON_TITLE);
 		if (jo.has(JSON_PHOTO)) {
 			mPhoto = new Photo(jo.getJSONObject(JSON_PHOTO));
 		}
