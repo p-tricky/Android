@@ -29,8 +29,17 @@ public class CrimeCameraFragment extends Fragment {
 			"com.bignerdranch.android.criminalintent.photo_filename";
 
 	private Camera mCamera;
+	private View mProgressContainer;
 	private SurfaceView mSurfaceView;
 	
+	private Camera.ShutterCallback mShutterCallback = new Camera.ShutterCallback() {
+		
+		public void onShutter() {
+			// Display the progress indicator
+			mProgressContainer.setVisibility(View.VISIBLE);
+		}
+	};
+
 	private Camera.PictureCallback mJpegCallback = new Camera.PictureCallback() {
 		
 		public void onPictureTaken(byte[] data, Camera camera) {
@@ -44,6 +53,7 @@ public class CrimeCameraFragment extends Fragment {
 				os.write(data);
 			} catch (Exception e) {
 				Log.e(TAG, "Error writing to file " + filename, e);
+				success = false;
 			} finally {
 				try {
 					if (os != null) {
@@ -73,12 +83,15 @@ public class CrimeCameraFragment extends Fragment {
 			Bundle savedInstanceState) {
 		View v = inflater.inflate(R.layout.fragment_crime_camera, parent, false);
 		
+		mProgressContainer = v.findViewById(R.id.crime_camera_progressContainer);
+		mProgressContainer.setVisibility(View.INVISIBLE);
+		
 		Button takePictureButton = (Button)v.
 				findViewById(R.id.crime_camera_takePictureButton);
 		takePictureButton.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
 				if (mCamera != null) {
-					mCamera.takePicture(null, mJpegCallback, null);
+					mCamera.takePicture(mShutterCallback, null, mJpegCallback);
 				}
 			}
 		});

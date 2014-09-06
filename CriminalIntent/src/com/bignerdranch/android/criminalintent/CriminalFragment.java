@@ -39,7 +39,7 @@ public class CriminalFragment extends Fragment {
 
 	private Crime mCrime;
 	
-	private ImageButton mPhotoButton;
+	private ImageView mPhotoButton;
 	private ImageView mPhotoView;
 	private EditText mTitleField;
 	private Button mDateButton;
@@ -151,7 +151,7 @@ public class CriminalFragment extends Fragment {
 					.getFileStreamPath(p.getFilename()).getAbsolutePath();
 			b = PictureUtils.getScaledDrawable(getActivity(), path);
 		}
-		mPhotoView.setImageDrawable(b);
+		mPhotoButton.setImageDrawable(b);
 	}
 
 	@Override
