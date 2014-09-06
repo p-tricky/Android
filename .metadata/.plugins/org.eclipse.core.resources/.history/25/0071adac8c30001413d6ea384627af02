@@ -1,0 +1,22 @@
+package com.bignerdranch.android.geoquiz;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class CheatActivity extends Activity {
+
+	private boolean mAnswer;
+	private TextView mAnswerTextView;
+	private Button mShowAnswerButton;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_cheat);
+		
+		mAnswer = getIntent().getBooleanExtra("answer", false);
+		mAnswerTextView = (TextView)getValueById(R.id.answerTextView);
+	}
+}
