@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-<typeInfo handle="=CriminalIntent/C:\/Users\/Patrick\/Documents\/GitHub\/Android\/CriminalIntent\/libs\/android-support-v4.jar&lt;android.support.v4.app(Fragment.class[Fragment" modifiers="33" timestamp="1409499209428"/>
-<typeInfo handle="=CriminalIntent/src&lt;com.bignerdranch.android.criminalintent{SingleFragmentActivity.java[SingleFragmentActivity" modifiers="1025" timestamp="1409623386170"/>
+<typeInfo handle="=PhotoGallery/C:\/Users\/Patrick\/Documents\/GitHub\/Android\/appcompat_v7\/libs\/android-support-v4.jar&lt;android.support.v4.app(Fragment.class[Fragment" modifiers="33" timestamp="1408848618064"/>
+<typeInfo handle="=PhotoGallery/C:\/Program Files \(x86)\/Android\/android-sdk\/platforms\/android-20\/android.jar&lt;android.content(BroadcastReceiver.class[BroadcastReceiver" modifiers="1057" timestamp="1408847714844"/>
+<typeInfo handle="=PhotoGallery/src&lt;com.example.photogallery{VisibleFragment.java[VisibleFragment" modifiers="1025" timestamp="1411339995777"/>
+<typeInfo handle="=PhotoGallery/src&lt;com.example.photogallery{SingleFragmentActivity.java[SingleFragmentActivity" modifiers="1025" timestamp="1410911181560"/>
 </typeInfoHistroy>
