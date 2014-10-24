@@ -19,4 +19,6 @@ Model-View-Controller architecture, and methods for passing
 data between activities and persisting data across screen
 rotations.  
 
-![main](https://github.com/p-tricky/Android/blob/master/images/GeoQuiz_1.png)
+![main1](https://github.com/p-tricky/Android/blob/master/images/GeoQuiz_1.png)
+![cheat](https://github.com/p-tricky/Android/blob/master/images/GeoQuiz_2.png)
+![main2](https://github.com/p-tricky/Android/blob/master/images/GeoQuiz_3.png)
