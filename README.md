@@ -12,13 +12,95 @@ experience.  The apps are pretty basic, but they certainly
 helped me develop familiarity key concepts of Android 
 programming.  
 
-## Geo Quiz
-The code for this app is pretty simple.  It introduces the
+## CriminalIntent
+CriminalIntent is a pretty cool app.  The launcher activity
+is a ListView that uses an ArrayAdapter to provide a scrollable
+interface for viewing the crime log.  The crime log is backed
+up on an locally stored JSONFile, so the current state of the crime
+log will persist forever (or at least untill the app is 
+uninstalled).
+![List](https://github.com/p-tricky/Android/blob/master/images/CriminalIntent_1.png)
+
+A new crime can be created from the options menu or an old
+crime can be edited by selecting it from the list. Both of 
+these actions will create a CriminalFragment.
+![CriminalFragment](https://github.com/p-tricky/Android/blob/master/images/CriminalIntent_2.png)
+
+The Criminal Fragment has several cool features. It provides 
+access to the phone's camera.
+![Camera](https://github.com/p-tricky/Android/blob/master/images/CriminalIntent_3.png)
+![Update1](https://github.com/p-tricky/Android/blob/master/images/CriminalIntent_4.png)
+
+Users can identify suspects from their contacts.
+![Suspects](https://github.com/p-tricky/Android/blob/master/images/CriminalIntent_5.png)
+![Update2](https://github.com/p-tricky/Android/blob/master/images/CriminalIntent_6.png)
+
+The CriminalFragment also uses chooser intents to send crime
+reports using any of the phones messaging applications.
+![Report](https://github.com/p-tricky/Android/blob/master/images/CriminalIntent_7.png)
+![Update3](https://github.com/p-tricky/Android/blob/master/images/CriminalIntent_8.png)
+
+## DragAndDraw
+DragAndDraw is a simple app with a single custom view that is
+specifically designed to handle touch events.  The user can
+draw pink boxes accross the screen by dragging.
+![Picasso](https://github.com/p-tricky/Android/blob/master/images/DragAndDraw_1.png)
+
+## HelloMoon
+HelloMoon uses the media player to play a recording of the
+first moon landing.
+![OneSmallStep](https://github.com/p-tricky/Android/blob/master/images/HelloMoon_1.png)
+
+## GeoQuiz
+The code for GeoQuiz is the first and most simple
+application of the tutorial.  It introduces the
 reader to application life-cycles, Android's 
 Model-View-Controller architecture, and methods for passing
 data between activities and persisting data across screen
 rotations.  
 
-![main1](https://github.com/p-tricky/Android/blob/master/images/GeoQuiz_1.png)
-![cheat](https://github.com/p-tricky/Android/blob/master/images/GeoQuiz_2.png)
-![main2](https://github.com/p-tricky/Android/blob/master/images/GeoQuiz_3.png)
+![Main1](https://github.com/p-tricky/Android/blob/master/images/GeoQuiz_1.png)
+![Cheat](https://github.com/p-tricky/Android/blob/master/images/GeoQuiz_2.png)
+![Main2](https://github.com/p-tricky/Android/blob/master/images/GeoQuiz_3.png)
+
+## PhotoGallery
+PhotoGallery is a flickr client for Android.  It introduces
+concepts like AsyncTasks, Loopers, and WebViews.  
+
+Performing a search from the options menu creates 
+an AsyncTask that uses the flickr API's querry method to
+download urls correpsonding to flickr thumbnail photos. A looper
+thread retrieves the thumbnails and provides handlers to the
+PhotoGallery GridView fragment. The GridView then uses the handler
+to populate its child views with the thumbnail.
+![GridView](https://github.com/p-tricky/Android/blob/master/images/PhotoGallery_1.png)
+
+When one of the thumbnails is selected, a WebView fragment
+is created to view the thumbnail.
+![WebView](https://github.com/p-tricky/Android/blob/master/images/PhotoGallery_2.png)
+
+
+## RunActivity
+RunActivity uses location data to track a user's runs.  It 
+incorporates cool android features like the location manager,
+broadcast receivers, local database storage and asynchronous
+data loaders, and the Google Maps API.
+
+The app opens to a list view of runs.
+![RunList](https://github.com/p-tricky/Android/blob/master/images/RunActivity_1.png)
+
+Selecting a run from the list opens a new view that displays
+relevent run data. 
+![RunFragment](https://github.com/p-tricky/Android/blob/master/images/RunActivity_2.png)
+From here the user can choose to start (or resume) collecting 
+location data for the selected run. In respone, Android's built-in
+location manager will start a pending intent that provides
+location data to the BroadcastReceiver.  The BroadcastReceiver
+will update the database will the location info even when the
+application is paused.  
+
+Selecting the Map button creates a google map.  A Loader queries
+the database on a background thread and uses callbacks to provide
+location data to the map.  
+![Map](https://github.com/p-tricky/Android/blob/master/images/RunActivity_3.png)
+`
